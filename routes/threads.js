@@ -6,7 +6,7 @@ router.get('/', threadsCtrl.index);
 router.get('/new', threadsCtrl.new);
 router.get('/:id', threadsCtrl.show);
 router.post('/', threadsCtrl.create);	
-
+router.delete('/:id', threadsCtrl.delete);
 
 
 

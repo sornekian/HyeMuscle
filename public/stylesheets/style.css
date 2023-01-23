@@ -67,15 +67,19 @@ h6 {
 }
 label {
   color: white;
+  text-align: center;
 }
 td {
   color: white;
   text-align: center;
+  max-width: 800px;
+  
 }
 th {
   color: white;
   font-weight: bolder;
   font-size: 18px;
+  
 }
 #new-form *, #add-comment-form * {
   font-size: 20px;

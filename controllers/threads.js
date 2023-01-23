@@ -5,6 +5,7 @@ module.exports = {
     show,
     new: newThread,
     create,
+    delete: deleteThread,
   };
 
 function index(req, res) {
@@ -24,15 +25,15 @@ function newThread(req, res) {
   };
  
 function create(req, res) {
-    req.body.nowActive = !!req.body.nowActive;
-    res.redirect('/threads');
-
-  const thread = new Thread(req.body);
+   const thread = new Thread(req.body);
   thread.save(function(err) {
     if (err) return res.redirect('/threads/new');
-    console.log(thread);
     res.redirect('/threads');
   })
  };
- 
- 
+
+function deleteThread(id) {
+  return Thread.findByIdAndDelete(id)
+    res.redirect('/threads');
+  
+}

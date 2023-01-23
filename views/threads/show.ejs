@@ -8,6 +8,7 @@
   <div>Content </div>
   <br>
   <div><%= thread.content %></div>
+  <form action="/threads/<%= thread._id %>?_method=DELETE" method="POST"> <button type="submit">X</button>
 
 <br><br><h5>Comments</h5>
 <form id="add-comment-form" action="/threads/<%= thread._id %>/comments" method="POST"></form>
@@ -53,6 +54,7 @@
         <td colspan="3"></td>
         <td><strong><%= (total / thread.comments.length).toFixed(1) %></strong></td>
       </tr>
+      
     </tbody>
   </table>
   

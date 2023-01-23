@@ -16,30 +16,31 @@ a {
 .login img {
   height: 25px;
 }
-nav {
+/* nav {
   background-color: #022939f9;
   text-align: center;
-  display: inline;
+ 
+} */
+#mainMenu {
+  margin: 10px;
+  width: 1200px;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-li {
-  float: none;
-  
-}
-li a {
+#mainMenu li {
   display: block;
+  width: 220px;
+  float: left; 
+  margin-left: 2px;   
+}
+#mainMenu li a {
+  display: block;
+  padding: 10px;
   color: white;
   text-align: center;
-  padding: 16px;
   text-decoration: none;
 }
-li a:hover {
+#mainMenu a:hover {
   background-color: #111111;
+  
 }
 h1 {
   color: white;
@@ -57,6 +58,9 @@ h3 {
   text-align: center;
   margin-top: 100px;
 }
+h5 {
+  text-align: center;
+}
 h6 {
   color: rgb(255, 0, 0);
   margin-top: 350px;
@@ -66,9 +70,12 @@ label {
 }
 td {
   color: white;
+  text-align: center;
 }
 th {
   color: white;
+  font-weight: bolder;
+  font-size: 18px;
 }
 #new-form *, #add-comment-form * {
   font-size: 20px;
@@ -77,9 +84,29 @@ th {
   display: grid;
   grid-template-columns: auto auto;
   gap: 1rem;
+  width: 500px;
 }
 #add-comment-form input[type="submit"] {
-  width: 8rem;
-  grid-column: 2 / 3;
+  width: 1rem;
+ 
   margin-bottom: 2rem;
+  
+}
+
+#show-page {
+  color: rgb(206, 224, 240);
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+}
+#post-title {
+  font-size: 30px;
+}
+#post-content {
+  font-size: 30px;
+}
+#nl_comment_button {
+  margin-left: 540px;
+  margin-top: 90px;
+  position: absolute;
 }

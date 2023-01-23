@@ -5,6 +5,7 @@
     <tr>
       <th>Title</th>
       <th>Content</th>
+      <th>Date Posted</th>
     </tr>
   </thead>
   
@@ -13,6 +14,7 @@
         <tr>
           <td><%= t.title %></td>
           <td><%= t.content %></td>
+          <td><%= t.date %></td>
           <td><a href="/threads/<%= t._id %>">View Post</a></td>
         </tr>
         <% }); %>

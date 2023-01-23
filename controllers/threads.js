@@ -14,8 +14,9 @@ function index(req, res) {
   };
 
 function show(req, res) {
-    Thread.findById(req.params.id)
-          res.render("threads/show", { title: "Thread Detail", thread });
+    Thread.findById(req.params.id, function(err, thread){
+      res.render("threads/show", { title: "Thread Detail", thread }); 
+    })
   };
 
 function newThread(req, res) {

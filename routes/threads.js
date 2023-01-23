@@ -4,6 +4,7 @@ const threadsCtrl = require('../controllers/threads');
 
 router.get('/', threadsCtrl.index);
 router.get('/new', threadsCtrl.new);
+router.get('/:id', threadsCtrl.show);
 router.post('/', threadsCtrl.create);	
 
 

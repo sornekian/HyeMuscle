@@ -2,6 +2,7 @@ const Thread = require("../models/thread");
 
 module.exports = {
     index,
+    show,
     new: newThread,
     create,
   };
@@ -12,12 +13,18 @@ function index(req, res) {
     })
   };
 
+function show(req, res) {
+    Thread.findById(req.params.id)
+          res.render("threads/show", { title: "Thread Detail", thread });
+  };
+
 function newThread(req, res) {
     res.render('threads/new')
   };
  
 function create(req, res) {
     req.body.nowActive = !!req.body.nowActive;
+
   const thread = new Thread(req.body);
   thread.save(function(err) {
     if (err) return res.redirect('/threads/new');

@@ -5,8 +5,15 @@ const Schema = mongoose.Schema;
 const commentSchema = new Schema({
   content: {
     type: String,
-    required: true
+    required: true,
   },
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
+  userName: String,
+  userAvatar: String,
 }, {
   timestamps: true
 });

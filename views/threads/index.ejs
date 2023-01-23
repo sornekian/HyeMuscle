@@ -1,0 +1,20 @@
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% threads.forEach(function(t) { %>
+        <tr>
+          <td><%= t.title %></td>
+          <td><%= t.content %></td>
+        </tr>
+        <% }); %>
+
+  </tbody>
+</table>
+

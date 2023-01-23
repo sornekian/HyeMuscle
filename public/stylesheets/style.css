@@ -1,6 +1,9 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #031c34;
+  /* background-image: url("https://i.imgur.com/dhOt7k7.jpg"); */
+  /* background-position: fill; */
 }
 
 a {
@@ -16,4 +19,36 @@ a {
 
 .login img {
   height: 30px;
+}
+
+nav {
+  background-color: #022939f9;
+}
+
+h6 {
+  color: rgb(255, 0, 0);
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+label {
+  color: white;
+}
+
+td {
+  color: white;
+}
+
+th {
+  color: white;
 }

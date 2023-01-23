@@ -5,50 +5,52 @@ body {
   /* background-image: url("https://i.imgur.com/dhOt7k7.jpg"); */
   /* background-position: fill; */
 }
-
 a {
   color: #00B7FF;
 }
-
 .login {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 34px;
 }
-
 .login img {
   height: 30px;
 }
-
 nav {
   background-color: #022939f9;
 }
-
 h6 {
   color: rgb(255, 0, 0);
 }
-
 h1 {
   color: white;
 }
-
 p {
   color: white;
 }
-
 h2 {
   color: white;
 }
-
 label {
   color: white;
 }
-
 td {
   color: white;
 }
-
 th {
   color: white;
+}
+#new-form *, #add-review-form * {
+  font-size: 20px;
+}
+#add-review-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+#add-review-form input[type="submit"] {
+  width: 8rem;
+  grid-column: 2 / 3;
+  margin-bottom: 2rem;
 }

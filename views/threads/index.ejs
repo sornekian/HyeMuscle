@@ -1,4 +1,4 @@
-
+<%- include('../partials/header') %>
 
 <table>
   <thead>
@@ -7,11 +7,13 @@
       <th>Content</th>
     </tr>
   </thead>
+  
   <tbody>
     <% threads.forEach(function(t) { %>
         <tr>
           <td><%= t.title %></td>
           <td><%= t.content %></td>
+          <td><a href="/threads/<%= t._id %>">View Post</a></td>
         </tr>
         <% }); %>
 

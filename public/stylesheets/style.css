@@ -14,8 +14,29 @@ a {
   height: 34px;
   color: white;
 }
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
+  color: white;
+}
 .login img {
   height: 25px;
+}
+.logout img {
+  height: 25px;
+}
+.nl_comment {
+  text-align: center; 
+  display: flex;
+  color: rgb(230, 234, 230);
+  background-color: #031c34;
+  width: 25%;
+  align-items: center;
+  margin: auto;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 17px;
 }
 nav {
   text-align: center;

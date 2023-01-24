@@ -32,8 +32,21 @@ function create(req, res) {
   })
  };
 
-function deleteThread(id) {
-  return Thread.findByIdAndDelete(id)
-    res.redirect('/threads');
-  
-}
+function deleteThread(req, res, next) {
+  Thread.findByIdAndDelete(req.params.id, function (err, thread) {
+    if (err) { return next(err) }
+    res.redirect('/threads')
+  })
+};
+
+function update(req, res, next) {
+  const updatedThread = {
+    title: req.body.title,
+    content: req.body.content,
+  }
+  Thread.findByIdAndUpdate(req.params.id, updatedThread, { new: true }, function (err, project) {
+    if (err) { return next(err) }
+    res.redirect(`/project/${project._id}`)
+  })
+};
+

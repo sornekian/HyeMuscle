@@ -1,9 +1,14 @@
 const Thread = require('../models/thread')
 
 module.exports = {
+    new: newComment,
     create,
     delete: deleteComment,
 }
+
+function newComment(req, res) {
+    res.render(`/threads/${thread._id}`)
+  };
 
 function create(req, res) {
     Thread.findById(req.params.id, function(err, thread) {

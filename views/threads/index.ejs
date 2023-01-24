@@ -15,7 +15,7 @@
         <tr>
           <td><%= t.title %></td>
           <td><%= t.content %></td>
-          <td><%= t.date %></td>
+          <td><%= t.createdAt.toLocaleDateString() %></td>
           <td><a href="/threads/<%= t._id %>">View Discussion</a></td>
         </tr>
         <% }); %>

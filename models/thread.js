@@ -14,8 +14,9 @@ const commentSchema = new Schema({
   },
   userName: String,
   userAvatar: String,
+    
 }, {
-  timestamps: true
+timestamps: true
 });
 	
 const threadSchema = new Schema({

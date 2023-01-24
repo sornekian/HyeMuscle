@@ -11,12 +11,18 @@
 <h1>HyeMuscle</h1>
 <body> 
     
-   <ul id="mainMenu">  
-    <li><a href="/">Home</a></li>
-    <li><a href="/threads">View All Threads</a></li>
-    <li><a href="/threads/new">Post New Thread</a></li>
-    <li><a href="/threads/archive">Archived Threads</a></li>
-    <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/Mweez7l.png"></a> 
-  </ul>
+   <nav>
+     <ul id="mainMenu">
+      <li><a href="/">Home</a></li>
+      <li><a href="/threads">View All Threads</a></li>
+      <li><a href="/threads/new">Post New Thread</a></li>
+      <li><a href="/archives">Archived Threads</a></li>
+      <% if (user) { %>
+        <a href="/logout">LOG OUT</a>
+        <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/Mweez7l.png"></a>
+        <% } %>
+    </ul>
+   </nav>
 
   

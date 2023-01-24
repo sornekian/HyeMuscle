@@ -19,6 +19,7 @@ function create(req, res) {
 
         thread.comments.push(req.body)
         thread.save(function(err) {
+        console.log(thread)
             res.redirect(`/threads/${thread._id}`)
         })
     })

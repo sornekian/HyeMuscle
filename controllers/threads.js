@@ -44,9 +44,9 @@ function update(req, res, next) {
     title: req.body.title,
     content: req.body.content,
   }
-  Thread.findByIdAndUpdate(req.params.id, updatedThread, { new: true }, function (err, project) {
+  Thread.findByIdAndUpdate(req.params.id, updatedThread, { new: true }, function (err, thread) {
     if (err) { return next(err) }
-    res.redirect(`/project/${project._id}`)
+    res.redirect(`/thread/${thread._id}`)
   })
 };
 

@@ -4,8 +4,8 @@ module.exports = {
     new: newComment,
     create,
     delete: deleteComment,
-    edit,
-    update,
+    // edit,
+    // update,
 }
 
 function newComment(req, res) {
@@ -39,14 +39,24 @@ async function deleteComment(req, res, next) {
     }
 }
 
-function edit(req, res) {
-    res.render('comments/edit', {
-        title: 'Edit',
-        todo: Comment.getOne(req.params.id)
-    })
-}
 
-function update(req, res) {
-    Comment.updateOne(req.body, req.params.id)
-    res.redirect(`/comments/${req.params.id}`)
-}
+
+
+// function edit(req, res, next) {
+//     console.log('check it out')
+//     console.log(req.params)
+//     Thread.findOne(req.params.id, (err, thread) => {
+//         console.log(thread)
+//     }) 
+   
+//   }
+//   function update(req, res, next) {
+//     console.log('check it out5')
+//     const updatedComment = {
+//       content: req.body.content,
+//     }
+//     Thread.findByIdAndUpdate(req.params.id, updatedComment, { new: true }, function (err, thread) {
+//       if (err) { return next(err) }
+//       res.redirect(`/threads/${thread._id}`)
+//     })
+//   };

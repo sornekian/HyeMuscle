@@ -11,10 +11,4 @@ router.get('/:id/edit', ensureLoggedIn, threadsCtrl.edit);
 router.put('/:id', ensureLoggedIn, threadsCtrl.update);
 router.get('/:id', threadsCtrl.show);
 
-
-
-
-
-
-
 module.exports = router;

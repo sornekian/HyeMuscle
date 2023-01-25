@@ -56,8 +56,10 @@
           <td><%= thread.createdAt.toLocaleDateString(); %></td>
           <td>
             <% if (user?._id.equals(c.user)) { %>
+              <!-- <a href="/comments/<%= c._id %>">Edit</a> -->
+                
               <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
+                <button type="submit">Delete</button>
               </form>
             <% } %>
           </td>

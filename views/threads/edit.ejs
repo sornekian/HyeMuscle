@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<h2>Update Thread Post</h2>
+
+<form action="/threads/<%= thread._id %>?_method=PUT" method="POST">
+  <div id="post-title"><label>Title</label>
+    <input type="text" name="title" style="color: white; height: 25px; width:400px; background-color: #031c34;">
+  </label></div><br>
+  <div id="post-content"><label>Content</label>
+    <input type="text" value="<%= thread.content %>" name="content" style="color: white; height:100px; width:700px; font-size:14pt; background-color: #031c34;">
+  </label><br>
+  <button type="submit">Update Post</button>
+</div><br>
+</form>
+
+<%- include('../partials/footer') %>

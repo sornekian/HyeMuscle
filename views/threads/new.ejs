@@ -8,16 +8,9 @@
   </label></div><br>
   <div id="post-content"><label>Content</label>
     <input type="text" name="content" style="color: white; height:100px; width:700px; font-size:14pt; background-color: #031c34;">
-  </label>
-  <% if (user) { %>
+  </label><br>
   <button type="submit">Create Post</button>
-  <% } else { %>
-    <a href="/loggers" class="poster">Create Post</a>
-    <% } %>
-
 </div><br>
 </form>
-
-
 
 <%- include('../partials/footer') %>

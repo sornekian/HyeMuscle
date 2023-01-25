@@ -28,9 +28,5 @@ router.get('/logout', function(req, res){
     res.redirect('/');
   });
 });
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'HyeMuscle' });
-});
 
 module.exports = router;

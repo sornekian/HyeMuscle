@@ -6,6 +6,7 @@ module.exports = {
     new: newThread,
     create,
     delete: deleteThread,
+    edit,
     update,
   };
 
@@ -43,7 +44,12 @@ function deleteThread(req, res, next) {
     res.redirect('/threads')
   })
 };
-
+function edit(req, res, next) {
+  Thread.findById(req.params.id, function (err, thread) {
+      if (err) { return next(err); }
+      res.render('threads/edit', { thread })
+  });
+}
 function update(req, res, next) {
   const updatedThread = {
     title: req.body.title,
@@ -51,7 +57,7 @@ function update(req, res, next) {
   }
   Thread.findByIdAndUpdate(req.params.id, updatedThread, { new: true }, function (err, thread) {
     if (err) { return next(err) }
-    res.redirect(`/thread/${thread._id}`)
+    res.redirect(`/threads/${thread._id}`)
   })
 };
 

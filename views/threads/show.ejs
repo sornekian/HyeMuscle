@@ -17,8 +17,9 @@
             <td><%= thread.content %></td>
             <td><%= thread.createdAt.toLocaleDateString(); %></td>
             <td><% if (user?._id.equals(thread.user)) { %>
+              <a href="/threads/<%= thread._id %>/edit"><button type="submit">Edit</button></a>                
               <form action="/threads/<%= thread._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
+                <button type="submit">Delete</button>
               </form>
               <% } %>
             </td>
@@ -27,15 +28,13 @@
   </table>
 
 <br><br><h5>Comments</h5>
+<% if (user) { %>
   <form id="add-comment-form" action="/threads/<%= thread._id %>/comments" method="POST">
     <label></label>
     <textarea name="content"></textarea>
-    <% if (user) { %>
       <input type="submit" value="Add Comment">
-      <% } else { %>
-      <a href="/loggers" class="nl_comment">Add Comment</a>
-      <% } %>
-  </form>
+    </form>
+    <% } %>
 
 <% if (thread.comments.length) { %>
   <table>

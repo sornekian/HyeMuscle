@@ -7,6 +7,9 @@ body {
 a {
   color: #00B7FF;
 }
+.home img {
+  height: 30px;
+}
 .login {
   display: flex;
   justify-content: center;
@@ -109,6 +112,7 @@ h5 {
 h6 {
   color: rgb(255, 0, 0);
   margin-top: 400px;
+  margin-left: 100px;
 }
 label {
   color: white;

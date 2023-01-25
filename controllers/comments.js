@@ -4,6 +4,8 @@ module.exports = {
     new: newComment,
     create,
     delete: deleteComment,
+    edit,
+    update,
 }
 
 function newComment(req, res) {
@@ -35,4 +37,16 @@ async function deleteComment(req, res, next) {
         } catch(err) {
         return next(err)
     }
+}
+
+function edit(req, res) {
+    res.render('comments/edit', {
+        title: 'Edit',
+        todo: Comment.getOne(req.params.id)
+    })
+}
+
+function update(req, res) {
+    Comment.updateOne(req.body, req.params.id)
+    res.redirect(`/comments/${req.params.id}`)
 }

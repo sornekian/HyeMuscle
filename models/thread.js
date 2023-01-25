@@ -28,7 +28,16 @@ const threadSchema = new Schema({
     type: String,
     required: true,
   },
-  comments: [commentSchema]
+  comments: [commentSchema],
+  
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
+  userName: String,
+  userAvatar: String,
+    
 }, {
     timestamps: true
 });

@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>User</th>
       <th>Title</th>
       <th>Content</th>
       <th>Date Posted</th>
@@ -11,8 +12,10 @@
   </thead>
   
   <tbody>
+ 
     <% threads.forEach(function(t) { %>
         <tr>
+          <td><%= t.userName %></td>
           <td><%= t.title %></td>
           <td><%= t.content %></td>
           <td><%= t.createdAt.toLocaleDateString() %></td>

@@ -32,7 +32,7 @@ async function deleteComment(req, res, next) {
         thread.comments.remove(req.params.id)
         await thread.save()
         res.redirect(`/threads/${thread._id}`)
-    } catch(err) {
+        } catch(err) {
         return next(err)
     }
 }

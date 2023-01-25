@@ -4,6 +4,7 @@
   <table>
     <thead>
       <tr>
+        <th>User</th>
         <th>Title</th>
         <th>Content</th>
         <th>Date Posted</th>
@@ -11,9 +12,16 @@
     </thead>
     <tbody>
           <tr>
+            <td class="thread-user"><%= thread.userName %></td>
             <td><%= thread.title %></td>
             <td><%= thread.content %></td>
             <td><%= thread.createdAt.toLocaleDateString(); %></td>
+            <td><% if (user?._id.equals(thread.user)) { %>
+              <form action="/threads/<%= thread._id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+              </form>
+              <% } %>
+            </td>
           </tr> 
     </tbody>
   </table>

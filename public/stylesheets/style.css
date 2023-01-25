@@ -38,6 +38,15 @@ a {
   font-family: 'Orbitron', sans-serif;
   font-size: 17px;
 }
+.poster {
+  text-align: center; 
+  display: flex;
+  color: rgb(230, 234, 230);
+  background-color: #031c34;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 17px;
+}
 nav {
   text-align: center;
   width: 100%;
@@ -125,6 +134,7 @@ td {
   border-style: groove;
   border-radius: 5px; 
   border-spacing: 100px;
+  border-color: #1a4d7c93;
   background-color: #031c34;
   margin-left: 5600px;
   

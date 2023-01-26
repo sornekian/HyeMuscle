@@ -1,6 +1,6 @@
 # HyeMuscle
 
-The following is a Muscle Car Forum created and designed to be a safe space to discuss, debate or relay any thoughts a User may feel strongly about. 
+The following is a Muscle Car Forum created and designed to be a safe space to discuss, debate or relay any thoughts a User may feel strongly about regarding American made Muscle Cars.  
 
 *Users* that are **not logged in** are able to view the 'Home', 'All Threads', 'Archived Threads' and 'Hall of Cars' pages.
 

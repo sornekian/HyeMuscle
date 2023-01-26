@@ -16,6 +16,7 @@ function index(req, res) {
     Thread.find({})
     .sort({ "createdAt": -1 })
     .exec(function (err, threads) {
+        console.log(threads)
         res.render("threads/index", { threads })
     })
 };

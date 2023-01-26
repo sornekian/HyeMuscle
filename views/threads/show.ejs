@@ -53,7 +53,7 @@
         <tr>
           <td class="comment-user"><%= c.userName %></td>
           <td><%= c.content %></td>
-          <td><%= thread.createdAt.toLocaleDateString(); %></td>
+          <td><%= thread.updatedAt.toLocaleDateString(); %></td>
           <td>
             <% if (user?._id.equals(c.user)) { %>                
               <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">

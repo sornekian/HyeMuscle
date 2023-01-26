@@ -51,6 +51,12 @@ a {
   font-family: 'Orbitron', sans-serif;
   font-size: 17px;
 }
+.submit-button {
+  align-items: center;
+  font-size: 20px;
+  display: grid;
+  margin: auto;
+}
 nav {
   text-align: center;
   width: 100%;

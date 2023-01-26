@@ -13,13 +13,16 @@ function index(req, res) {
     Thread.find({}, function (err, threads) {
       res.render("threads/index", { title: "All Active Threads", threads });
     })
+    Thread.find({})
+    .sort({ "createdAt": -1 })
+    .exec(function (err, threads) {
+        res.render("threads/index", { threads })
+    })
 };
 function show(req, res) {
     Thread.findById(req.params.id, function(err, thread){
       res.render("threads/show", { title: "Thread Detail", thread });
     })
-    // Thread.find({})
-    // .sort({threadDate: 'asc'}) 
 };
 function newThread(req, res) {
     res.render('threads/new')

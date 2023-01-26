@@ -15,7 +15,7 @@
             <td class="thread-user"><%= thread.userName %></td>
             <td><%= thread.title %></td>
             <td><%= thread.content %></td>
-            <td><%= thread.createdAt.toLocaleDateString(); %></td>
+            <td><%= thread.createdAt.toLocaleDateString(); %> <%= thread.createdAt.toLocaleTimeString(); %></td>
             <td><% if (user?._id.equals(thread.user)) { %>
               <a href="/threads/<%= thread._id %>/edit"><button type="submit">Edit</button></a>                
               <form action="/threads/<%= thread._id %>?_method=DELETE" method="POST">
@@ -53,7 +53,7 @@
         <tr>
           <td class="comment-user"><%= c.userName %></td>
           <td><%= c.content %></td>
-          <td><%= thread.updatedAt.toLocaleDateString(); %></td>
+          <td><%= c.updatedAt.toLocaleDateString(); %> <%= c.updatedAt.toLocaleTimeString() %></td>
           <td>
             <% if (user?._id.equals(c.user)) { %>                
               <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">

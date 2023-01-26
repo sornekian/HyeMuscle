@@ -4,11 +4,10 @@ The following is a Muscle Car Forum created and designed to be a safe space to d
 
 *Users* that are **not logged in** are able to view the 'Home', 'All Threads', 'Archived Threads' and 'Hall of Cars' pages.
 
-*Users* that **are logged in** have the same luxuries as those who are not, along with the added bonus of creating, editing and deleting threads, as well as, creating and deleting comments.
+*Users* that **are logged in** have the same luxuries as those who are not, **along with** the added bonus of creating, editing and deleting threads, as well as, creating and deleting comments.
 
 HOME PAGE
 ![Home](https://user-images.githubusercontent.com/119828225/214769817-3af06dc5-2fb6-4044-9adb-10e3d5099490.png)
-
 HALL OF CARS
 ![Hall of Cars](https://user-images.githubusercontent.com/119828225/214769829-b8ca5d87-a4b7-466c-8e4a-f74231beec7c.png)
 Logged Out VIEW ALL THREADS
@@ -27,7 +26,7 @@ This site consists of the following programs: _____________
 The following link ______________ is the deployable version of 'HyeMuscle'.
 
 Potential ICEBOX features that will be added soon:
-<br>
+
 Allowing a User to edit their comments.
 
 Creating a Profile page for users to track their post and comment history.
@@ -35,4 +34,3 @@ Creating a Profile page for users to track their post and comment history.
 Including messaging functionality so two or more Users can message each other privately. 
 
 Adding the ability to upload pictures or videos.
-

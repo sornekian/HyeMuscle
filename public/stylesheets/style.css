@@ -4,6 +4,17 @@ body {
   background-image: url("https://i.imgur.com/7B1Mjuj.png");
   margin: 0;
 }
+#cars-img img {
+  height: 600px;
+  width: 920px;
+}
+#cars-img li {
+  display: grid;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  text-size-adjust: auto;
+}
 a {
   color: #00B7FF;
 }
@@ -77,7 +88,7 @@ h2 {
   font-family: 'Shrikhand', cursive;
   text-align: center;
   font-size: 40px;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 h3 {
   text-align: center;

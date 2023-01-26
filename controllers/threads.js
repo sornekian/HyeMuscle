@@ -9,35 +9,30 @@ module.exports = {
     edit,
     update,
   };
-
 function index(req, res) {
     Thread.find({}, function (err, threads) {
       res.render("threads/index", { title: "All Active Threads", threads });
     })
-  };
-
+};
 function show(req, res) {
     Thread.findById(req.params.id, function(err, thread){
       res.render("threads/show", { title: "Thread Detail", thread }); 
     })
-  };
-
+};
 function newThread(req, res) {
     res.render('threads/new')
-  };
- 
+}; 
 function create(req, res) {
-    req.body.user = req.user._id
-    req.body.userName = req.user.name;
-    req.body.userAvatar = req.user.avatar;
+  req.body.user = req.user._id
+  req.body.userName = req.user.name;
+  req.body.userAvatar = req.user.avatar;
     
-   const thread = new Thread(req.body);
+  const thread = new Thread(req.body);
   thread.save(function(err) {
     if (err) return res.redirect('/threads/new');
     res.redirect('/threads');
   })
- };
-
+};
 function deleteThread(req, res, next) {
   Thread.findByIdAndDelete(req.params.id, function (err, thread) {
     if (err) { return next(err) }
@@ -48,8 +43,8 @@ function edit(req, res, next) {
   Thread.findById(req.params.id, function (err, thread) {
       if (err) { return next(err); }
       res.render('threads/edit', { thread })
-  });
-}
+  })
+};
 function update(req, res, next) {
   const updatedThread = {
     title: req.body.title,
@@ -60,5 +55,3 @@ function update(req, res, next) {
     res.redirect(`/threads/${thread._id}`)
   })
 };
-
-

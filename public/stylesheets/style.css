@@ -117,6 +117,7 @@ h6 {
   color: rgb(255, 0, 0);
   margin-top: 330px;
   margin-left: 100px;
+  
 }
 label {
   color: white;
@@ -164,7 +165,6 @@ th {
   display: flex;
   color: rgb(230, 234, 230);
   background-color: #031c34;
-  width:23%;
   align-items: center;
   margin: auto;
   font-family: 'Orbitron', sans-serif;

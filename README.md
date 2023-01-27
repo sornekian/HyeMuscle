@@ -7,23 +7,36 @@ The following is a Muscle Car Forum created and designed to be a safe space to d
 *Users* that **are logged in** have the same luxuries as those who are not, **along with** the added bonus of creating, editing and deleting threads, as well as, creating and deleting comments.
 
 HOME PAGE
-![Home](https://user-images.githubusercontent.com/119828225/214769817-3af06dc5-2fb6-4044-9adb-10e3d5099490.png)
+![Home Page](https://user-images.githubusercontent.com/119828225/214981588-ea410475-47ac-449e-858f-3504b71697fa.png)
+
 HALL OF CARS
-![Hall of Cars](https://user-images.githubusercontent.com/119828225/214769829-b8ca5d87-a4b7-466c-8e4a-f74231beec7c.png)
+![Hall of Cars](https://user-images.githubusercontent.com/119828225/214981874-ab8e2dba-b7b6-4715-8d31-721c70f73000.png)
+
 Logged Out VIEW ALL THREADS
-![NL View All Threads](https://user-images.githubusercontent.com/119828225/214769848-b541c1a7-8827-4ee2-9497-9efb1d55a467.png)
-Logged In VIEW ALL THREADS
-![LI View All Threads](https://user-images.githubusercontent.com/119828225/214769864-4b1d5462-31a1-4271-b7a4-865ad8b75286.png)
+![View All Threads](https://user-images.githubusercontent.com/119828225/214981769-4d4f91f5-511d-40f5-b230-007da53a555e.png)
+
 Logged In NEW THREAD POST
-![LI New Thread Post](https://user-images.githubusercontent.com/119828225/214769882-e24caf47-6edc-4b5b-bfda-8b552742f967.png)
+![Post New Thread](https://user-images.githubusercontent.com/119828225/214981780-1161e411-8733-450f-8269-175a3e8235f3.png)
+
 Logged In EDIT/DELETE POST
-![LI Edit_Delete Post](https://user-images.githubusercontent.com/119828225/214769890-aca11c68-05b5-4dde-8cd0-139b5635a5b6.png)
+![Edit:Delete Post](https://user-images.githubusercontent.com/119828225/214981786-8b6ac07a-d47d-4add-9898-b7094d6530b8.png)
+
 Logged In DELETE COMMENT
-![LI Delete Comment](https://user-images.githubusercontent.com/119828225/214769902-805b9fe7-f8af-4c8b-889e-853e13a8a9ca.png)
+![Delete Comment](https://user-images.githubusercontent.com/119828225/214981795-9fe7429c-9b52-47d7-bf91-3b01f8e27286.png)
 
-This site consists of the following programs: _____________
 
-The following link ______________ is the deployable version of 'HyeMuscle'.
+This site consists of the following programs: 
+<ul>
+  <li>JavaScript</li>
+  <li>Node.js</li>
+  <li>Express</li>
+  <li>MongoDB</li>
+  <li>Mongoose</li>
+  <li>Google OAuth 2.0</li>
+</ul>
+  
+  
+The following link (https://hyemuscle.herokuapp.com/) is the currently active version of 'HyeMuscle'.
 
 Potential ICEBOX features that will be added soon:
 

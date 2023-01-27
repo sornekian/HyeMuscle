@@ -186,20 +186,7 @@ th {
   font-size: 15px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  
-}
-textarea {
-  font-size: 3rem;
-  background-color: #031c34;
-  color: rgb(230, 234, 230);
-  display: flex;
-  width: 30%;
-  text-align: center;
-  align-items: center;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  justify-content: center;
+  align-items: center;  
 }
 button {
   color: rgb(230, 234, 230);

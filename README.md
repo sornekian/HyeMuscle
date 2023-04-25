@@ -1,6 +1,8 @@
 # HyeMuscle
 
-The following is a Muscle Car Forum created and designed to be a safe space to discuss, debate or relay any thoughts a User may feel strongly about regarding American made Muscle Cars.  
+The following is a Muscle Car Forum created and designed to be a safe space to discuss, debate or relay any thoughts a User may feel strongly about regarding American made Muscle Cars. <br>
+This link https://hyemuscle.herokuapp.com/ is the currently active version of 'HyeMuscle'.
+
 
 *Users* that are **not logged in** are able to view the 'Home', 'All Threads', 'Archived Threads' and 'Hall of Cars' pages.
 
@@ -12,17 +14,17 @@ HOME PAGE
 HALL OF CARS
 ![Hall of Cars](https://user-images.githubusercontent.com/119828225/214981874-ab8e2dba-b7b6-4715-8d31-721c70f73000.png)
 
-Logged Out VIEW ALL THREADS
-![View All Threads](https://user-images.githubusercontent.com/119828225/214981769-4d4f91f5-511d-40f5-b230-007da53a555e.png)
+VIEW ALL THREADS
+![Screenshot 2023-04-25 at 1 10 14 PM](https://user-images.githubusercontent.com/119828225/234391593-083aca4d-19a7-41de-9998-8f7959a981f2.png)
 
 Logged In NEW THREAD POST
-![Post New Thread](https://user-images.githubusercontent.com/119828225/214981780-1161e411-8733-450f-8269-175a3e8235f3.png)
+![thread post](https://user-images.githubusercontent.com/119828225/234391817-c0c71a17-2c49-4d07-b914-95d565297e5c.png)
 
 Logged In EDIT/DELETE POST
-![Edit:Delete Post](https://user-images.githubusercontent.com/119828225/214981786-8b6ac07a-d47d-4add-9898-b7094d6530b8.png)
+![user posted thread](https://user-images.githubusercontent.com/119828225/234391801-d52f5358-07ad-4d10-8ff6-e1002f591c8a.png)
 
 Logged In DELETE COMMENT
-![Delete Comment](https://user-images.githubusercontent.com/119828225/214981795-9fe7429c-9b52-47d7-bf91-3b01f8e27286.png)
+![user delete comment](https://user-images.githubusercontent.com/119828225/234391776-9c50f4dd-38b5-4df6-a2fd-010aab3ab952.png)
 
 
 This site consists of the following programs: 
@@ -36,7 +38,6 @@ This site consists of the following programs:
 </ul>
   
   
-The following link (https://hyemuscle.herokuapp.com/) is the currently active version of 'HyeMuscle'.
 
 Potential ICEBOX features that will be added soon:
 

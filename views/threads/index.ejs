@@ -1,32 +1,41 @@
 <%- include('../partials/header') %>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Date Posted</th>
-      <th>Rev On</th>
-    </tr>
-  </thead>
-  
-  <tbody>
- 
-    <% threads.forEach(function(t) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Title</th>
+        <!-- <th>Content</th> -->
+        <th>Date Posted</th>
+        <th>Rev On</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% threads.forEach(function(t) { %>
         <tr>
-          <td><%= t.userName %></td>
-          <td><%= t.title %></td>
-          <td><%= t.content %></td>
-          <td><%= t.createdAt.toLocaleDateString() %> <%= t.createdAt.toLocaleTimeString() %></td>
+          <td>
+            <%= t.userName %>
+          </td>
+          <td>
+            <%= t.title %>
+          </td>
+          <!-- <td>
+            <%= t.content %>
+          </td> -->
+          <td>
+            <%= t.createdAt.toLocaleDateString() %>
+              <%= t.createdAt.toLocaleTimeString() %>
+          </td>
           <td><a href="/threads/<%= t._id %>">View Discussion</a></td>
         </tr>
         <% }); %>
 
-  </tbody>
-</table>
-<br><br><br>
-<form action="/threads">
+    </tbody>
+  </table>
+  <br><br><br>
+  <form action="/threads">
     <button class="submit-button">Back to Top</button>
-</form>
-<%- include('../partials/footer') %>
+  </form>
+  <%- include('../partials/footer') %>

@@ -1,74 +1,93 @@
 <%- include('../partials/header') %>
 
-<section id="show-page">
-  <table>
-    <thead>
-      <tr>
-        <th>User</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Date Posted</th>
-      </tr>
-    </thead>
-    <tbody>
-          <tr>
-            <td class="thread-user"><%= thread.userName %></td>
-            <td><%= thread.title %></td>
-            <td><%= thread.content %></td>
-            <td><%= thread.createdAt.toLocaleDateString(); %> <%= thread.createdAt.toLocaleTimeString(); %></td>
-            <td><% if (user?._id.equals(thread.user)) { %>
-              <a href="/threads/<%= thread._id %>/edit"><button type="submit">Edit</button></a>                
+  <section id="show-page">
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Date Posted</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="thread-user">
+            <%= thread.userName %>
+          </td>
+          <td>
+            <%= thread.title %>
+          </td>
+          <td>
+            <%= thread.content %>
+          </td>
+          <td>
+            <%= thread.createdAt.toLocaleDateString(); %>
+              <%= thread.createdAt.toLocaleTimeString(); %>
+          </td>
+          <td>
+            <% if (user?._id.equals(thread.user)) { %>
+              <a href="/threads/<%= thread._id %>/edit"><button type="submit">Edit</button></a>
               <form action="/threads/<%= thread._id %>?_method=DELETE" method="POST">
                 <button type="submit">Delete</button>
               </form>
               <% } %>
-            </td>
-          </tr> 
-    </tbody>
-  </table>
-
-<br><br><h5>Comments</h5>
-<% if (user) { %>
-  <form id="add-comment-form" action="/threads/<%= thread._id %>/comments" method="POST">
-    <label></label>
-    <textarea name="content"></textarea>
-      <input type="submit" value="Add Comment">
-    </form>
-    <% } %>
-
-<% if (thread.comments.length) { %>
-  <table>
-    <thead>
-      <tr>
-        <th>User</th>
-        <th>Content</th>
-        <th>Date</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% let total = 0 %>
-      <% thread.comments.forEach(function(c) { %>
-
-        <tr>
-          <td class="comment-user"><%= c.userName %></td>
-          <td><%= c.content %></td>
-          <td><%= c.updatedAt.toLocaleDateString(); %> <%= c.updatedAt.toLocaleTimeString() %></td>
-          <td>
-            <% if (user?._id.equals(c.user)) { %>                
-              <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                <button type="submit">Delete</button>
-              </form>
-            <% } %>
           </td>
         </tr>
-      <% }); %>            
-    </tbody>
-  </table>
-  
-<% } else { %>
-  <h5>No Comments Yet</h5>
-<% } %>
-  
+      </tbody>
+    </table>
 
-<%- include('../partials/footer') %>
+    <br><br>
+    <h5>Comments</h5>
+    <% if (user) { %>
+      <form id="add-comment-form" action="/threads/<%= thread._id %>/comments" method="POST">
+        <label></label>
+        <textarea name="content" rows="5" cols="40" placeholder="Type Comment Here"
+          style="color: white; background-color: #031c34;"></textarea>
+        <input type="submit" value="Add Comment">
+      </form>
+      <% } %>
+
+        <% if (thread.comments.length) { %>
+          <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Content</th>
+                <th>Date</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% let total=0 %>
+                <% thread.comments.forEach(function(c) { %>
+
+                  <tr>
+                    <td class="comment-user">
+                      <%= c.userName %>
+                    </td>
+                    <td>
+                      <%= c.content %>
+                    </td>
+                    <td>
+                      <%= c.updatedAt.toLocaleDateString(); %>
+                        <%= c.updatedAt.toLocaleTimeString() %>
+                    </td>
+                    <td>
+                      <% if (user?._id.equals(c.user)) { %>
+                        <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                          <button type="submit">Delete</button>
+                        </form>
+                        <% } %>
+                    </td>
+                  </tr>
+                  <% }); %>
+            </tbody>
+          </table>
+
+          <% } else { %>
+            <h5>No Comments Yet</h5>
+            <% } %>
+
+
+              <%- include('../partials/footer') %>

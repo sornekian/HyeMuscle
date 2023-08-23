@@ -97,8 +97,8 @@
   }
 
   #mainMenu a:hover {
-    background-color: #201f5765;
-    opacity: 50%;
+    border-radius: 10px;
+    color:rgb(185, 238, 249);
   }
 
   h1 {

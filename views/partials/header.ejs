@@ -29,6 +29,40 @@
         <% } %>
     </ul>
 
+    <div class="hamburger-menu">
+      <div class="hamburger-menu-icon" id="hamburger-icon">&#9776;</div>
+      <ul class="hamburger-menu-list">
+        <li><a href="/" class="home">Home</a></li>
+        <li><a href="/threads">View All Threads</a></li>
+        <% if (user) { %>
+          <li><a href="/threads/new">Post New Thread</a></li>
+        <% } %>
+        <li><a href="/archives">Archived Threads</a></li>
+        <li><a href="/halls">Hall of Cars</a></li>
+        <% if (user) { %>
+          <li><a href="/logout" class="logout">LOG OUT</a></li>
+        <% } else { %>
+          <li><a href="/auth/google" class="login">LOG IN</a></li>
+        <% } %>
+      </ul>
+      </div>
    </nav>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const menuList = document.querySelector(".hamburger-menu-list");
+  
+      hamburgerIcon.addEventListener("click", function () {
+        menuList.classList.toggle("show-menu");
+      });
+      const menuItems = document.querySelectorAll(".hamburger-menu-list a");
+    menuItems.forEach(function (menuItem) {
+      menuItem.addEventListener("click", function () {
+        menuList.classList.remove("show-menu");
+      });
+    });
+  });
+  </script>
    
   

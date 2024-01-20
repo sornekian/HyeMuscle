@@ -10,17 +10,30 @@
     background-image: url("https://i.imgur.com/7B1Mjuj.png");
     margin: 0;
   }
+
+  #cars-img {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
   #cars-img img {
-    height: 600px;
-    width: 920px;
+    max-width: 100%;
+    height: auto;
   }
 
   #cars-img li {
-    display: grid;
     justify-content: center;
     color: white;
     text-align: center;
     text-size-adjust: auto;
+    list-style-type: none;
+  }
+
+  h3 img {
+    max-width: 100%;
+    height: auto;
   }
 
   a {
@@ -63,37 +76,6 @@
     font-size: 20px;
     display: grid;
     margin: auto;
-  }
-
-  nav {
-    text-align: center;
-    width: 100%;
-  }
-
-  #mainMenu {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  #mainMenu li {
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #mainMenu li a {
-    display: block;
-    padding: 9px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  #mainMenu a:hover {
-    border-radius: 10px;
-    color:rgb(185, 238, 249);
   }
 
   h1 {
@@ -224,6 +206,7 @@
     color: rgb(230, 234, 230);
     background-color: #031c34;
   }
+
   #mainMenu {
     display: none;
   }
@@ -231,11 +214,13 @@
   .hamburger-menu {
     display: block;
   }
+
   .hamburger-menu-icon {
     display: block;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 30px;
     color: white;
+    text-align: center;
   }
 
   .hamburger-menu-list {
@@ -248,6 +233,9 @@
   
   .hamburger-menu-list li {
     padding: 10px;
+    list-style-type: none;
+    text-align: center;
+    width: auto;
   }
 
   .hamburger-menu-list a {
@@ -256,6 +244,7 @@
   }
 }
 
+/* larger screens */
 
 @media (min-width: 414px) {
 
@@ -358,6 +347,10 @@
   #mainMenu a:hover {
     border-radius: 10px;
     color:rgb(185, 238, 249);
+  }
+
+  .hamburger-menu {
+    display: none;
   }
 
   h1 {
